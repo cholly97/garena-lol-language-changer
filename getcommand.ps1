@@ -1,5 +1,4 @@
-$loc = Get-Location
-$loc = $loc.Path + "\command.bat"
+$loc = ".\command.bat"
 try {
     $client_process = Get-CimInstance Win32_Process -Filter "name = 'LeagueClient.exe'"
     Stop-Process $client_process.ProcessId
